@@ -22,15 +22,22 @@ def apply_coupons(cart, coupons)
     food = coup[:item]
     if cart.has_key?(food)
       if cart[food][:count] >= coup[:num]
+<<<<<<< HEAD
           unless  cart["#{food} W/COUPON"].nil?
       cart["#{food} W/COUPON"][:count] += coup[:num]
     end
+=======
+>>>>>>> a951525f627f884153bdd163f105331ceb0b1e06
       cart["#{food} W/COUPON"] ||= {}
       cart["#{food} W/COUPON"][:price] ||= coup[:cost] / coup[:num]
       cart["#{food} W/COUPON"][:clearance] ||= cart[food][:clearance]
       cart["#{food} W/COUPON"][:count] ||= coup[:num]
       cart[food][:count] -= coup[:num]   
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> a951525f627f884153bdd163f105331ceb0b1e06
     end
   end
 end
